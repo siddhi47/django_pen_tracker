@@ -6,6 +6,7 @@ class PenForm(ModelForm):
     class Meta:
         model = Pen
         fields = "__all__"
+        exclude = ('added_by','owners')
         widgets = {
             "color": TextInput(attrs={
                 'type':'color'
